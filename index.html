@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>AnaDocs AI — Anaplan model intelligence by Accodian</title>
+<meta name="description" content="AnaDocs AI documents, scores and explains Anaplan models from the exports you already have — health score, Planual compliance, optimiser, test packs, Polaris migration planning and an AI assistant that cites your model.">
+<link rel="canonical" href="https://anadocsai.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anadocsai.com/">
+<meta property="og:title" content="AnaDocs AI — understand any Anaplan model in minutes">
+<meta property="og:description" content="Documentation, health score, Planual compliance, optimiser, test packs and Polaris migration planning — generated from your Anaplan exports.">
+<meta property="og:image" content="https://anadocsai.com/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B111C">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235B9DFF'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='36' font-weight='700' text-anchor='middle' fill='%23fff'%3EA%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#0B111C;--bg2:#111a29;--bg3:#172235;--bd:#22304a;--tx:#e8eef8;--tx2:#a9b6cb;--tx3:#71809a;--ac:#5B9DFF;--ac2:#8ab8ff;--gr:#3fbf7f;--am:#e0a458;--pu:#a98bf5;--r:14px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--ac2);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+header.top{position:sticky;top:0;z-index:10;background:rgba(11,17,28,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+.top .wrap{display:flex;align-items:center;gap:28px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--tx);font-weight:700;font-size:18px;letter-spacing:-.2px}
+.brand:hover{text-decoration:none}
+.logo{width:30px;height:30px;border-radius:8px;background:var(--ac);display:grid;place-items:center;color:#fff;font-weight:800;font-size:16px}
+.brand small{display:block;font-size:10.5px;font-weight:600;color:var(--tx3);letter-spacing:.6px;text-transform:uppercase;line-height:1}
+.brand .ai{color:var(--ac)}
+nav.links{display:flex;gap:22px;margin-left:auto}
+nav.links a{color:var(--tx2);font-size:14.5px}
+nav.links a:hover{color:var(--tx);text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:10px;font-weight:600;font-size:15px;border:1px solid transparent;transition:.15s}
+.btn:hover{text-decoration:none}
+.btn.pri{background:var(--ac);color:#fff}
+.btn.pri:hover{background:#4a8cf0}
+.btn.gh{border-color:var(--bd);color:var(--tx);background:var(--bg2)}
+.btn.gh:hover{border-color:var(--ac)}
+.btn.sm{padding:8px 14px;font-size:14px}
+.hero{padding:88px 0 40px;text-align:center;background:radial-gradient(1000px 420px at 50% -80px,rgba(91,157,255,.20),transparent 70%)}
+.eyebrow{display:inline-block;font-size:13px;font-weight:600;color:var(--ac2);background:rgba(91,157,255,.12);border:1px solid rgba(91,157,255,.3);padding:5px 12px;border-radius:999px;margin-bottom:22px}
+h1{font-size:clamp(36px,5.6vw,62px);line-height:1.08;letter-spacing:-1.5px;margin:0 auto 20px;max-width:900px}
+h1 .grad{background:linear-gradient(90deg,#8ab8ff,#a98bf5);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:clamp(17px,2vw,20px);color:var(--tx2);max-width:760px;margin:0 auto 32px}
+.ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.shot{margin:56px auto 0;max-width:1080px;border-radius:16px;border:1px solid var(--bd);overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 0 1px rgba(91,157,255,.08)}
+.trust{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin-top:34px;color:var(--tx3);font-size:14px}
+.trust span::before{content:"✓";color:var(--gr);margin-right:7px;font-weight:700}
+section{padding:84px 0}
+section.alt{background:var(--bg2);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)}
+.sec-head{max-width:760px;margin:0 0 42px}
+.sec-head.c{margin:0 auto 46px;text-align:center}
+.kicker{font-size:13px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--ac)}
+h2{font-size:clamp(28px,3.6vw,40px);line-height:1.15;letter-spacing:-.8px;margin:10px 0 14px}
+.sec-head p{color:var(--tx2);font-size:17.5px;margin:0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stat{background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r);padding:22px}
+.stat b{display:block;font-size:30px;letter-spacing:-.5px;color:var(--ac2)}
+.stat span{color:var(--tx2);font-size:14.5px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--bg3);border:1px solid var(--bd);border-radius:var(--r);padding:24px}
+section:not(.alt) .card{background:var(--bg2)}
+.card .ico{font-size:22px;width:44px;height:44px;border-radius:11px;display:grid;place-items:center;background:rgba(91,157,255,.12);margin-bottom:14px}
+.card h3{margin:0 0 8px;font-size:18px;letter-spacing:-.2px}
+.card p{margin:0;color:var(--tx2);font-size:15px}
+.split{display:grid;grid-template-columns:1fr 1.25fr;gap:52px;align-items:center}
+.split.rev{grid-template-columns:1.25fr 1fr}
+.split.rev .txt{order:2}
+.split .img{border-radius:14px;border:1px solid var(--bd);overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+ul.ticks{list-style:none;padding:0;margin:20px 0 0}
+ul.ticks li{padding:7px 0 7px 30px;position:relative;color:var(--tx2)}
+ul.ticks li::before{content:"";position:absolute;left:4px;top:15px;width:12px;height:7px;border-left:2px solid var(--gr);border-bottom:2px solid var(--gr);transform:rotate(-45deg)}
+ul.ticks li b{color:var(--tx)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;background:rgba(169,139,245,.15);color:var(--pu);margin-left:8px;vertical-align:middle;letter-spacing:.3px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
+.step{position:relative;padding:26px 24px 24px;border:1px solid var(--bd);border-radius:var(--r);background:var(--bg3)}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:-16px;left:22px;width:32px;height:32px;border-radius:50%;background:var(--ac);color:#fff;font-weight:700;display:grid;place-items:center}
+.step h3{margin:6px 0 8px;font-size:18px}
+.step p{margin:0;color:var(--tx2);font-size:15px}
+.who{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cta-band{text-align:center;padding:84px 0;background:radial-gradient(800px 340px at 50% 120%,rgba(91,157,255,.22),transparent 70%)}
+.cta-band p{color:var(--tx2);font-size:18px;max-width:640px;margin:0 auto 30px}
+footer{border-top:1px solid var(--bd);padding:40px 0;color:var(--tx3);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+footer a{color:var(--tx2)}
+.fine{font-size:13px;color:var(--tx3);margin-top:14px}
+@media (max-width:900px){
+  nav.links{display:none}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .grid3,.who,.steps{grid-template-columns:1fr}
+  .split,.split.rev{grid-template-columns:1fr;gap:28px}
+  .split.rev .txt{order:0}
+  section{padding:64px 0}
+  .hero{padding-top:64px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="AnaDocs AI home"><span class="logo">A</span><span>AnaDocs <span class="ai">AI</span><small>by Accodian</small></span></a>
+    <nav class="links" aria-label="Sections">
+      <a href="#features">Features</a>
+      <a href="#polaris">Polaris migration</a>
+      <a href="#ai">AI assistant</a>
+      <a href="#security">Security</a>
+      <a href="#how">How it works</a>
+    </nav>
+    <a class="btn pri sm" href="https://accodian.com/contact" rel="noopener">Request a demo</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Anaplan model intelligence · for CoEs, model builders and partners</span>
+      <h1>Understand any Anaplan model <span class="grad">in minutes, not weeks</span></h1>
+      <p class="lead">AnaDocs AI turns the exports Anaplan already gives you into complete documentation, a health score, Planual compliance, test packs and a Polaris migration plan — and an AI assistant that answers questions about your model with citations you can click.</p>
+      <div class="ctas">
+        <a class="btn pri" href="https://accodian.com/contact" rel="noopener">Request a demo →</a>
+        <a class="btn gh" href="#features">See what's inside</a>
+      </div>
+      <div class="shot"><img src="assets/overview.webp" width="1440" height="900" alt="AnaDocs AI overview page for a supply-planning demo model: modules, line items, lists, model size, Planual score, detected engine and health score"></div>
+      <div class="trust">
+        <span>Runs in your browser</span><span>Your model is never uploaded</span><span>No integration project</span><span>Classic and Polaris aware</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="stats">
+        <div class="stat"><b>12</b><span>weighted health-score categories, with the maths published</span></div>
+        <div class="stat"><b>41</b><span>Planual rules tested line item by line item</span></div>
+        <div class="stat"><b>65</b><span>source-linked Classic → Polaris migration rules</span></div>
+        <div class="stat"><b>~5 s</b><span>to stream a 1.8-million-event model history export</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="features">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Everything from the exports you already have</span>
+        <h2>Documentation a reviewer would sign off — generated, not typed</h2>
+        <p>Drop the Blueprint, Lists and Actions exports. AnaDocs AI parses every module, line item and formula and builds the documentation and the analysis a senior Anaplan consultant would produce by hand.</p>
+      </div>
+      <div class="grid3">
+        <div class="card"><div class="ico">📖</div><h3>Living documentation</h3><p>Functional and technical docs per module, data-flow diagrams, dependency maps, a business glossary and line-item lineage — exported as an interactive doc site or Markdown.</p></div>
+        <div class="card"><div class="ico">🗣</div><h3>Formulas in plain English</h3><p>Every formula rebuilt as natural sentences, with each referenced line item explained — the fastest way to hand a model to someone new.</p></div>
+        <div class="card"><div class="ico">◎</div><h3>Health score &amp; Planual</h3><p>Twelve weighted categories against PLANS, DISCO and the Planual, with the scoring maths shown and intentional design choices excludable with a written reason.</p></div>
+        <div class="card"><div class="ico">⚡</div><h3>Optimiser</h3><p>Anti-patterns that cost memory or calculation time, sized in real bytes for the engine your model runs on — populated cells on Polaris, the dense grid on Classic.</p></div>
+        <div class="card"><div class="ico">✓</div><h3>Test generator</h3><p>Risk-ranked coverage, boundary tests from your own IF conditions, UAT scripts, buildable check modules and a regression baseline for releases.</p></div>
+        <div class="card"><div class="ico">🕘</div><h3>History, audit &amp; diff</h3><p>Who changed what and when from the History export — blame per line item, audit packs — plus a structural diff between two versions of the model.</p></div>
+        <div class="card"><div class="ico">🔌</div><h3>Source mapping &amp; import failures</h3><p>Profile an ERP extract against a target module with value-by-value checks, and turn an import error dump into root causes with ordered fixes.</p></div>
+        <div class="card"><div class="ico">🏢</div><h3>Estate &amp; license audit</h3><p>Compare models across the estate, spot cross-model feeds and drift, and find dormant or over-licensed seats priced at your own contract rates.</p></div>
+        <div class="card"><div class="ico">🧭</div><h3>Polaris migration planner</h3><p>What will not work on Polaris, what calculates differently, what to redesign — and a phased plan with effort, timeline and roles.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="polaris">
+    <div class="wrap split">
+      <div class="txt">
+        <span class="kicker">Classic → Polaris</span>
+        <h2>A senior-consultant migration assessment, generated from your model</h2>
+        <p style="color:var(--tx2);font-size:17px">Anaplan's direction is Polaris, and there is no converter. AnaDocs AI scans every line item against the documented engine differences and builds the plan around what it finds.</p>
+        <ul class="ticks">
+          <li><b>Will not work</b> — functions Polaris lacks, summary-method combinations it rejects, formulas over the length limit, invalid LOOKUP and time-scale patterns.</li>
+          <li><b>Reconcile</b> — valid formulas whose answers change between engines, pre-flagged for the reconciliation team.</li>
+          <li><b>Redesign</b> — patterns Polaris amplifies, ranked against your model's own calculation-effort hotspots.</li>
+          <li><b>The plan</b> — entitlement, port or rebuild, remediation, security, parallel run, cutover and hypercare, with effort and timeline you can tune.</li>
+        </ul>
+      </div>
+      <div class="img"><img src="assets/polaris.webp" width="1440" height="900" loading="lazy" alt="Polaris migration readiness page showing blockers, reconcile and redesign counts, delivery effort, weeks to cutover and a recommendation"></div>
+    </div>
+  </section>
+
+  <section class="alt" id="ai">
+    <div class="wrap split rev">
+      <div class="txt">
+        <span class="kicker">AI that cites your model <span class="tag">AnaDocs AI</span></span>
+        <h2>Ask the model. Get answers you can verify.</h2>
+        <p style="color:var(--tx2);font-size:17px">Built on Anthropic's Claude, the AI layer reads the parsed model through tools — it does not guess. Every claim links to the module or line item it came from.</p>
+        <ul class="ticks">
+          <li><b>Ask AnaDocs</b> — "What breaks if I rename the SKU list?" answered with clickable citations.</li>
+          <li><b>Fix Studio</b> — corrected formulas with before / after diffs, risk and steps, collected into a remediation pack.</li>
+          <li><b>Handover Studio</b> — a role-tailored onboarding course for whoever inherits the model.</li>
+          <li><b>Section briefs</b> — executive summary, savings memo, release notes and CoE memo on demand.</li>
+        </ul>
+        <p class="fine">AI output is generated and should be checked against the model before you rely on it. The AI runs only when you ask it to.</p>
+      </div>
+      <div class="img"><img src="assets/dataflow.webp" width="1440" height="900" loading="lazy" alt="Data flow diagram of a demo model showing input, system, data, calculation and output module groups"></div>
+    </div>
+  </section>
+
+  <section id="security">
+    <div class="wrap">
+      <div class="sec-head c">
+        <span class="kicker">Security by design</span>
+        <h2>Your model stays on your machine</h2>
+        <p>Model designs are confidential. AnaDocs AI was built so that none of it has to leave your laptop.</p>
+      </div>
+      <div class="grid3">
+        <div class="card"><div class="ico">🖥</div><h3>Parsed in the browser</h3><p>Exports are read by the app on your machine. There is no upload, no server-side copy of your model, no telemetry and no analytics.</p></div>
+        <div class="card"><div class="ico">🔒</div><h3>Locked-down by policy</h3><p>A strict content-security policy blocks every outbound connection except the AI provider — and that is only contacted when you run an AI feature.</p></div>
+        <div class="card"><div class="ico">🧾</div><h3>Metadata, not data</h3><p>Documentation needs structure — formulas, dimensions, actions — not your planning numbers. The optional Anaplan connector pulls metadata only, never cell data.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="how">
+    <div class="wrap">
+      <div class="sec-head c">
+        <span class="kicker">How it works</span>
+        <h2>From export to documented model in three steps</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><h3>Export</h3><p>Download the Blueprint, Lists and Actions exports from Anaplan — or let the connector script pull the same metadata through Anaplan's API.</p></div>
+        <div class="step"><h3>Drop</h3><p>Drop the files into AnaDocs AI. Column names don't need to match; the app recognises Anaplan's exports and works out the rest.</p></div>
+        <div class="step"><h3>Review &amp; act</h3><p>Read the docs, the health score and the findings; export the doc site, test packs and migration plan; ask the AI what to fix first.</p></div>
+      </div>
+      <div class="split" style="margin-top:60px">
+        <div class="txt">
+          <span class="kicker">Built for</span>
+          <h2 style="font-size:30px">The people who own Anaplan models</h2>
+          <ul class="ticks">
+            <li><b>CoE leads</b> — estate-wide health, governance, license reclamation and release evidence.</li>
+            <li><b>Model builders</b> — what a formula does, what depends on it, and what to fix first.</li>
+            <li><b>Partners &amp; consultants</b> — health checks, handovers and Polaris assessments in a fraction of the time.</li>
+          </ul>
+        </div>
+        <div class="img"><img src="assets/scorecard.webp" width="1440" height="900" loading="lazy" alt="Health score page with weighted categories and scores for a demo model"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>See AnaDocs AI on your own model</h2>
+      <p>Book a walkthrough and we'll document one of your models live — from export to health score, test pack and Polaris plan.</p>
+      <a class="btn pri" href="https://accodian.com/contact" rel="noopener">Request a demo →</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#top"><span class="logo">A</span><span>AnaDocs <span class="ai">AI</span><small>by Accodian</small></span></a>
+      <p class="fine">© 2026 Accodian LLC. All rights reserved.<br>Anaplan is a trademark of Anaplan, Inc. AnaDocs AI is an independent product and is not affiliated with or endorsed by Anaplan.</p>
+    </div>
+    <div>
+      <b style="color:var(--tx)">Accodian LLC</b><br>
+      390 Amwell Road, Hillsborough NJ 08844, USA<br>
+      Kochi Infopark · Bangalore Electronic City, India<br>
+      <a href="https://accodian.com/" rel="noopener">accodian.com</a> · <a href="https://accodian.com/contact" rel="noopener">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
