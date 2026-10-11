@@ -43,6 +43,8 @@ nav.links a:hover{color:var(--tx);text-decoration:none}
 .btn.gh{border-color:var(--bd2);color:var(--tx);background:var(--bg2)}
 .btn.gh:hover{border-color:var(--ac)}
 .btn.sm{padding:8px 14px;font-size:14px}
+.top .actions{display:flex;align-items:center;gap:10px;flex:none}
+.hero .fine{max-width:720px;margin:20px auto 0;font-size:14px}
 .hero{padding:84px 0 24px;text-align:center;background:radial-gradient(1000px 420px at 50% -80px,rgba(91,157,255,.16),transparent 70%)}
 .eyebrow{display:inline-block;font-size:13px;font-weight:600;color:var(--ac2);letter-spacing:.2px;margin-bottom:18px}
 h1{font-size:clamp(36px,5.4vw,60px);line-height:1.08;letter-spacing:-1.4px;margin:0 auto 20px;max-width:880px}
@@ -98,14 +100,20 @@ footer{border-top:1px solid var(--bd);padding:40px 0;color:var(--tx3);font-size:
 footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
 footer a{color:var(--tx2)}
 .fine{font-size:13px;color:var(--tx3);margin-top:14px}
-@media (max-width:900px){
+@media (max-width:1040px){
   nav.links{display:none}
+  .top .actions{margin-left:auto}
+}
+@media (max-width:900px){
   .stats{grid-template-columns:repeat(2,1fr)}
   .grid3,.who,.steps,.intro{grid-template-columns:1fr}
   .intro{gap:20px}
   section{padding:64px 0}
   .hero{padding-top:60px}
   .frame .bar{height:26px}
+}
+@media (max-width:600px){
+  .top .actions .gh{display:none}
 }
 </style>
 </head>
@@ -139,8 +147,12 @@ footer a{color:var(--tx2)}
       <a href="#ai">AI assistant</a>
       <a href="#security">Security</a>
       <a href="#how">How it works</a>
+      <a href="https://app.anadocsai.com/" rel="noopener">Sign in</a>
     </nav>
-    <a class="btn pri sm" href="https://accodian.com/contact" rel="noopener">Request a demo</a>
+    <div class="actions">
+      <a class="btn gh sm" href="https://accodian.com/contact" rel="noopener">Request a demo</a>
+      <a class="btn pri sm" href="https://app.anadocsai.com/signup" rel="noopener">Sign up free</a>
+    </div>
   </div>
 </header>
 
@@ -151,9 +163,11 @@ footer a{color:var(--tx2)}
       <h1>Understand any Anaplan model <span class="em">in minutes, not weeks</span></h1>
       <p class="lead">AnaDocs AI turns the exports Anaplan already gives you into complete documentation, a health score, Planual compliance, test packs and a Polaris migration plan — and an AI assistant that answers questions about your model with citations you can click.</p>
       <div class="ctas">
-        <a class="btn pri" href="https://accodian.com/contact" rel="noopener">Request a demo →</a>
+        <a class="btn pri" href="https://app.anadocsai.com/signup" rel="noopener">Sign up free →</a>
+        <a class="btn gh" href="https://accodian.com/contact" rel="noopener">Request a demo</a>
         <a class="btn gh" href="#features">See what's inside</a>
       </div>
+      <p class="fine">Free accounts document one model: tell us which (workspace and model id) when you sign up; the administrator confirms it when approving. The server refuses any other model over the Anaplan connection; for export files the app honours the same assignment. A person approves each account, usually within a business day. No email verification, no credit card.</p>
       <figure class="shot">
         <div class="frame">
           <div class="bar"><i></i><i></i><i></i><span>AnaDocs AI — Supply Planning Demo</span></div>
@@ -277,7 +291,7 @@ footer a{color:var(--tx2)}
         <p>Model designs are confidential. AnaDocs AI was built so that none of it has to leave your laptop.</p>
       </div>
       <div class="grid3">
-        <div class="card"><div class="badge"><svg class="ic"><use href="#i-monitor"/></svg></div><h3>Parsed in the browser</h3><p>Exports are read by the app on your machine. There is no upload, no server-side copy of your model, no telemetry and no analytics.</p></div>
+        <div class="card"><div class="badge"><svg class="ic"><use href="#i-monitor"/></svg></div><h3>Parsed in the browser</h3><p>Exports are read by the app in your browser. There is no upload and no server-side copy of your model, no telemetry and no analytics. A hosted account record holds your email, name, plan and the name or id of the model you document — never the model itself. Every account is approved by a person before it can connect to Anaplan.</p></div>
         <div class="card"><div class="badge"><svg class="ic"><use href="#i-lock"/></svg></div><h3>Locked down by policy</h3><p>A strict content-security policy blocks every outbound connection except the AI provider — and that is only contacted when you run an AI feature.</p></div>
         <div class="card"><div class="badge"><svg class="ic"><use href="#i-db"/></svg></div><h3>Metadata, not data</h3><p>Documentation needs structure — formulas, dimensions, actions — not your planning numbers. The optional Anaplan connector pulls metadata only, never cell data.</p></div>
       </div>
@@ -307,7 +321,10 @@ footer a{color:var(--tx2)}
     <div class="wrap">
       <h2>See AnaDocs AI on your own model</h2>
       <p>Book a walkthrough and we'll document one of your models live — from export to health score, test pack and Polaris plan.</p>
-      <a class="btn pri" href="https://accodian.com/contact" rel="noopener">Request a demo →</a>
+      <div class="ctas">
+        <a class="btn pri" href="https://accodian.com/contact" rel="noopener">Request a demo →</a>
+        <a class="btn gh" href="https://app.anadocsai.com/signup" rel="noopener">Sign up free</a>
+      </div>
     </div>
   </section>
 </main>
@@ -322,7 +339,7 @@ footer a{color:var(--tx2)}
       <b style="color:var(--tx)">Accodian LLC</b><br>
       390 Amwell Road, Hillsborough NJ 08844, USA<br>
       Kochi Infopark · Bangalore Electronic City, India<br>
-      <a href="https://accodian.com/" rel="noopener">accodian.com</a> · <a href="https://accodian.com/contact" rel="noopener">Contact</a>
+      <a href="https://accodian.com/" rel="noopener">accodian.com</a> · <a href="https://accodian.com/contact" rel="noopener">Contact</a> · <a href="https://app.anadocsai.com/" rel="noopener">Sign in</a>
     </div>
   </div>
 </footer>
