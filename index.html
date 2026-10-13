@@ -167,7 +167,7 @@ footer a{color:var(--tx2)}
         <a class="btn gh" href="https://accodian.com/contact" rel="noopener">Request a demo</a>
         <a class="btn gh" href="#features">See what's inside</a>
       </div>
-      <p class="fine">Free accounts document one model: tell us which (workspace and model id) when you sign up; the administrator confirms it when approving. The server refuses any other model over the Anaplan connection; for export files the app honours the same assignment. A person approves each account, usually within a business day. No email verification, no credit card.</p>
+      <p class="fine">Free accounts document one model: tell us which (workspace and model id) when you sign up; the administrator confirms it when approving. The server refuses any other model over the Anaplan connection and enforces the same assignment when it builds documentation from export files. A person approves each account, usually within a business day. No email verification, no credit card.</p>
       <figure class="shot">
         <div class="frame">
           <div class="bar"><i></i><i></i><i></i><span>AnaDocs AI — Supply Planning Demo</span></div>
@@ -176,8 +176,8 @@ footer a{color:var(--tx2)}
         <figcaption>The overview for the built-in supply-planning demo model. Click any screenshot to open it full size.</figcaption>
       </figure>
       <div class="trust">
-        <span><svg class="ic"><use href="#i-tick"/></svg>Runs in your browser</span>
-        <span><svg class="ic"><use href="#i-tick"/></svg>Your model is never uploaded</span>
+        <span><svg class="ic"><use href="#i-tick"/></svg>Built from structure, never cell values</span>
+        <span><svg class="ic"><use href="#i-tick"/></svg>Held in memory, never written to disk</span>
         <span><svg class="ic"><use href="#i-tick"/></svg>No integration project</span>
         <span><svg class="ic"><use href="#i-tick"/></svg>Classic and Polaris aware</span>
       </div>
@@ -287,12 +287,12 @@ footer a{color:var(--tx2)}
     <div class="wrap">
       <div class="sec-head c">
         <span class="kicker">Security by design</span>
-        <h2>Your model stays on your machine</h2>
-        <p>Model designs are confidential. AnaDocs AI was built so that none of it has to leave your laptop.</p>
+        <h2>Your model is processed, not stored</h2>
+        <p>Model designs are confidential. AnaDocs AI reads your exports in your browser, builds the documentation in memory on our server, and keeps no copy of your model afterwards.</p>
       </div>
       <div class="grid3">
-        <div class="card"><div class="badge"><svg class="ic"><use href="#i-monitor"/></svg></div><h3>Parsed in the browser</h3><p>Exports are read by the app in your browser. There is no upload and no server-side copy of your model, no telemetry and no analytics. A hosted account record holds your email, name, plan and the name or id of the model you document — never the model itself. Every account is approved by a person before it can connect to Anaplan.</p></div>
-        <div class="card"><div class="badge"><svg class="ic"><use href="#i-lock"/></svg></div><h3>Locked down by policy</h3><p>A strict content-security policy blocks every outbound connection except the AI provider — and that is only contacted when you run an AI feature.</p></div>
+        <div class="card"><div class="badge"><svg class="ic"><use href="#i-monitor"/></svg></div><h3>Processed in memory</h3><p>Your export files are read in your browser. To build the documentation, the model's structure — names, formulas, dimensions, formats, sizes and notes, never cell values — is sent over an encrypted connection to the AnaDocs server and processed in memory. It is kept for at most 30 minutes after your last request, never written to disk or logged, and discarded when you sign out. Your account record holds your email, name and plan, and the name, id and size counts of the model you document.</p></div>
+        <div class="card"><div class="badge"><svg class="ic"><use href="#i-lock"/></svg></div><h3>Locked down by policy</h3><p>A strict content-security policy blocks every outbound connection except to the AnaDocs server and the AI provider, which is contacted only when you run an AI feature. The optional live Anaplan connection relays your own Anaplan session, read-only and only for the models your account is approved for; Anaplan's answers pass straight back to your browser and your Anaplan password is never stored. Every account is approved by a person before it can connect to Anaplan.</p></div>
         <div class="card"><div class="badge"><svg class="ic"><use href="#i-db"/></svg></div><h3>Metadata, not data</h3><p>Documentation needs structure — formulas, dimensions, actions — not your planning numbers. The optional Anaplan connector pulls metadata only, never cell data.</p></div>
       </div>
     </div>
