@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>AnaDocs AI — Anaplan model intelligence by Accodian</title>
-<meta name="description" content="AnaDocs AI documents, scores and explains Anaplan models from the exports you already have — health score, Planual compliance, optimiser, test packs, Polaris migration planning and an AI assistant that cites your model.">
+<meta name="description" content="AnaDocs AI documents, scores and explains Anaplan models from the exports you already have — health score, Planual compliance, an optimisation report, test packs, Polaris migration planning and an AI Copilot that cites your model.">
 <link rel="canonical" href="https://anadocsai.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://anadocsai.com/">
 <meta property="og:title" content="AnaDocs AI — understand any Anaplan model in minutes">
-<meta property="og:description" content="Documentation, health score, Planual compliance, optimiser, test packs and Polaris migration planning — generated from your Anaplan exports.">
+<meta property="og:description" content="Documentation, health score, Planual compliance, an optimisation report, test packs and Polaris migration planning — generated from your Anaplan exports.">
 <meta property="og:image" content="https://anadocsai.com/assets/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0B111C">
@@ -206,7 +206,7 @@ footer a{color:var(--tx2)}
         <div class="card"><div class="badge"><svg class="ic"><use href="#i-doc"/></svg></div><h3>Living documentation</h3><p>Functional and technical docs per module, data-flow diagrams, dependency maps, a business glossary and line-item lineage — exported as an interactive doc site or Markdown.</p></div>
         <div class="card"><div class="badge"><svg class="ic"><use href="#i-chat"/></svg></div><h3>Formulas in plain English</h3><p>Every formula rebuilt as natural sentences, with each referenced line item explained — the fastest way to hand a model to someone new.</p></div>
         <div class="card"><div class="badge"><svg class="ic"><use href="#i-gauge"/></svg></div><h3>Health score &amp; Planual</h3><p>Twelve weighted categories against PLANS, DISCO and the Planual, with the scoring maths shown and intentional design choices excludable with a written reason.</p></div>
-        <div class="card"><div class="badge"><svg class="ic"><use href="#i-bolt"/></svg></div><h3>Optimiser</h3><p>Anti-patterns that cost memory or calculation time, sized in real bytes for the engine your model runs on — populated cells on Polaris, the dense grid on Classic.</p></div>
+        <div class="card"><div class="badge"><svg class="ic"><use href="#i-bolt"/></svg></div><h3>Optimisation report</h3><p>A Classic track and a Polaris track, each rule tied to published Anaplan and expert guidance: what costs memory or calculation time, in the order to fix it. Sizes come from what Anaplan reports or the export measures, and are never guessed from a grid.</p></div>
         <div class="card"><div class="badge"><svg class="ic"><use href="#i-check"/></svg></div><h3>Test generator</h3><p>Risk-ranked coverage, boundary tests from your own IF conditions, UAT scripts, buildable check modules and a regression baseline for releases.</p></div>
         <div class="card"><div class="badge"><svg class="ic"><use href="#i-history"/></svg></div><h3>History, audit &amp; diff</h3><p>Who changed what and when from the History export — blame per line item and audit packs — plus a structural diff between two versions of the model.</p></div>
         <div class="card"><div class="badge"><svg class="ic"><use href="#i-plug"/></svg></div><h3>Source mapping &amp; import failures</h3><p>Profile an ERP extract against a target module with value-by-value checks, and turn an import error dump into root causes with ordered fixes.</p></div>
@@ -267,11 +267,12 @@ footer a{color:var(--tx2)}
           <span class="kicker">AI that cites your model</span>
           <h2>Ask the model. Get answers you can verify.</h2>
           <p>Built on Anthropic's Claude, the AI layer reads the parsed model through tools — it does not guess. Every claim links back to the module or line item it came from.</p>
-          <p class="fine">AI output is generated and should be checked against the model before you rely on it. The AI runs only when you ask it to.</p>
+          <p class="fine">AI output is generated and should be checked against the model before you rely on it. The AI runs only when you ask it to. In the hosted app it runs on our Claude key, within a spending allowance set for each account: our server builds each prompt from your model's structure, your question and the results of the look-ups the AI makes, and sends it to Anthropic. Those look-ups can include data you loaded into the page, such as before and after values from a Model History export or rejected lines from an import-error file; cell values from the model itself are not sent. People named in model history and licence data are replaced with pseudonyms in your browser first. We store only counts and cost, never your questions, the answers or your model, and a conversation is held only in server memory, until 30 minutes after your last question.</p>
         </div>
         <ul class="ticks">
-          <li><b>Ask AnaDocs</b> — "What breaks if I rename the SKU list?" answered with clickable citations.</li>
-          <li><b>Fix Studio</b> — every finding becomes a corrected formula with a before / after diff, risk and steps, collected into a remediation pack.</li>
+          <li><b>Copilot</b> — "What breaks if I rename the SKU list?" answered with clickable citations; one AI entry point for the whole app.</li>
+          <li><b>AI enrichment</b> — module purposes, glossary definitions and formula explanations written into the documentation in parallel, each marked AI-generated.</li>
+          <li><b>Fix Studio</b> — every finding becomes a short corrected formula with steps and risk, shown in its own row and collected into a remediation pack.</li>
           <li><b>Handover Studio</b> — a role-tailored onboarding course for whoever inherits the model.</li>
           <li><b>Section briefs</b> — executive summary, savings memo, release notes and CoE memo on demand.</li>
         </ul>
@@ -291,9 +292,9 @@ footer a{color:var(--tx2)}
         <p>Model designs are confidential. AnaDocs AI reads your exports in your browser, builds the documentation in memory on our server, and keeps no copy of your model afterwards.</p>
       </div>
       <div class="grid3">
-        <div class="card"><div class="badge"><svg class="ic"><use href="#i-monitor"/></svg></div><h3>Processed in memory</h3><p>Your export files are read in your browser. To build the documentation, the model's structure — names, formulas, dimensions, formats, sizes and notes, never cell values — is sent over an encrypted connection to the AnaDocs server and processed in memory. It is kept for at most 30 minutes after your last request, never written to disk or logged, and discarded when you sign out. Your account record holds your email, name and plan, and the name, id and size counts of the model you document.</p></div>
-        <div class="card"><div class="badge"><svg class="ic"><use href="#i-lock"/></svg></div><h3>Locked down by policy</h3><p>A strict content-security policy blocks every outbound connection except to the AnaDocs server and the AI provider, which is contacted only when you run an AI feature. The optional live Anaplan connection relays your own Anaplan session, read-only and only for the models your account is approved for; Anaplan's answers pass straight back to your browser and your Anaplan password is never stored. Every account is approved by a person before it can connect to Anaplan.</p></div>
-        <div class="card"><div class="badge"><svg class="ic"><use href="#i-db"/></svg></div><h3>Metadata, not data</h3><p>Documentation needs structure — formulas, dimensions, actions — not your planning numbers. The optional Anaplan connector pulls metadata only, never cell data.</p></div>
+        <div class="card"><div class="badge"><svg class="ic"><use href="#i-monitor"/></svg></div><h3>Processed in memory</h3><p>Your export files are read in your browser. To build the documentation, the model's structure — names, formulas, dimensions, formats, sizes and notes, never cell values — is sent over an encrypted connection to the AnaDocs server and processed in memory. It is kept for at most 30 minutes after your last request, never written to disk or logged, and discarded when you sign out. Your account record holds your email, name and plan, the name, id and size counts of the model you document, and the token counts and cost of each AI request.</p></div>
+        <div class="card"><div class="badge"><svg class="ic"><use href="#i-lock"/></svg></div><h3>Locked down by policy</h3><p>A strict content-security policy blocks every outbound connection except to the AnaDocs server and the AI provider. The AI features go through our server and run only when you start one: the server builds each prompt from your model's structure and sends it to Anthropic, within the spending limits set for your account, and keeps only token counts and cost. Your browser contacts the AI provider directly only if your administrator lets you use your own key. The optional live Anaplan connection relays your own Anaplan session, read-only and only for the models your account is approved for; Anaplan's answers pass straight back to your browser and your Anaplan password is never stored. Every account is approved by a person before it can connect to Anaplan.</p></div>
+        <div class="card"><div class="badge"><svg class="ic"><use href="#i-db"/></svg></div><h3>Metadata, not data</h3><p>Documentation needs structure — formulas, dimensions, actions — not your planning numbers. The optional Anaplan connector pulls metadata only, never cell data, and you choose which kinds it brings in.</p></div>
       </div>
     </div>
   </section>
