@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>AnaDocs AI — Worked examples: five Anaplan problems, solved from the exports</title>
+<meta name="description" content="Five illustrative scenarios showing how AnaDocs AI handles a Polaris migration decision, a departed builder, a slow Classic model, a Polaris model that needs tuning, and an eight-model estate.">
+<link rel="canonical" href="https://anadocsai.com/case-studies.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://anadocsai.com/case-studies.html">
+<meta property="og:title" content="AnaDocs AI — five Anaplan problems, solved from the exports">
+<meta property="og:description" content="Worked examples: Polaris decision, departed builder, slow model, Polaris tuning, and a CoE estate.">
+<meta property="og:image" content="https://anadocsai.com/assets/og.jpg">
+<meta name="theme-color" content="#0B111C">
+<style>
+:root{--bg:#0B111C;--bg2:#101828;--bg3:#151f31;--bd:#223049;--bd2:#2c3d5c;--tx:#e8eef8;--tx2:#a7b4c9;--tx3:#6f7e98;--ac:#5B9DFF;--ac2:#8ab8ff;--gr:#3fbf7f;--r:14px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--ac2);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.ic{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex:none}
+header.top{position:sticky;top:0;z-index:10;background:rgba(11,17,28,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+.top .wrap{display:flex;align-items:center;gap:28px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--tx);font-weight:700;font-size:18px;letter-spacing:-.2px}
+.brand:hover{text-decoration:none}
+.logo{width:30px;height:30px;border-radius:8px;background:var(--ac);display:grid;place-items:center;color:#fff;font-weight:800;font-size:16px}
+.brand small{display:block;font-size:10.5px;font-weight:600;color:var(--tx3);letter-spacing:.6px;text-transform:uppercase;line-height:1}
+.brand .ai{color:var(--ac)}
+nav.links{display:flex;gap:24px;margin-left:auto}
+nav.links a{color:var(--tx2);font-size:14.5px}
+nav.links a:hover{color:var(--tx);text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:10px;font-weight:600;font-size:15px;border:1px solid transparent;transition:.15s}
+.btn:hover{text-decoration:none}
+.btn.pri{background:var(--ac);color:#fff}
+.btn.pri:hover{background:#4a8cf0}
+.btn.gh{border-color:var(--bd2);color:var(--tx);background:var(--bg2)}
+.btn.gh:hover{border-color:var(--ac)}
+.btn.sm{padding:8px 14px;font-size:14px}
+.top .actions{display:flex;align-items:center;gap:10px;flex:none}
+.hero .fine{max-width:720px;margin:20px auto 0;font-size:14px}
+.hero{padding:84px 0 24px;text-align:center;background:radial-gradient(1000px 420px at 50% -80px,rgba(91,157,255,.16),transparent 70%)}
+.eyebrow{display:inline-block;font-size:13px;font-weight:600;color:var(--ac2);letter-spacing:.2px;margin-bottom:18px}
+h1{font-size:clamp(36px,5.4vw,60px);line-height:1.08;letter-spacing:-1.4px;margin:0 auto 20px;max-width:880px}
+h1 .em{color:var(--ac2)}
+.lead{font-size:clamp(17px,2vw,19.5px);color:var(--tx2);max-width:760px;margin:0 auto 32px}
+.ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+/* product screenshots: real aspect ratio, sharp on high-DPI screens, click for full size */
+.frame{margin:0;border-radius:12px;border:1px solid var(--bd2);background:var(--bg2);overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.5)}
+.frame .bar{display:flex;align-items:center;gap:7px;height:34px;padding:0 14px;border-bottom:1px solid var(--bd);background:#0d1524}
+.frame .bar i{width:10px;height:10px;border-radius:50%;background:#2a3852}
+.frame .bar span{margin-left:10px;font-size:12px;color:var(--tx3)}
+.frame a{display:block}
+.frame img{width:100%}
+.frame a:hover{text-decoration:none}
+figure.shot{margin:52px auto 0;max-width:1100px}
+figure.shot figcaption,.cap{font-size:13.5px;color:var(--tx3);margin-top:12px;text-align:center}
+.trust{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin-top:30px;color:var(--tx3);font-size:14px}
+.trust span{display:inline-flex;align-items:center;gap:7px}
+.trust .ic{width:16px;height:16px;color:var(--gr);stroke-width:2.2}
+section{padding:84px 0}
+section.alt{background:var(--bg2);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)}
+.sec-head{max-width:760px;margin:0 0 40px}
+.sec-head.c{margin:0 auto 44px;text-align:center}
+.kicker{font-size:12.5px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:var(--ac)}
+h2{font-size:clamp(28px,3.4vw,38px);line-height:1.15;letter-spacing:-.7px;margin:10px 0 14px}
+.sec-head p,.intro p{color:var(--tx2);font-size:17px;margin:0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stat{background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r);padding:22px}
+.stat b{display:block;font-size:30px;letter-spacing:-.5px;color:var(--ac2)}
+.stat span{color:var(--tx2);font-size:14.5px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--bg3);border:1px solid var(--bd);border-radius:var(--r);padding:22px 22px 24px}
+section:not(.alt) .card{background:var(--bg2)}
+.card .badge{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;background:rgba(91,157,255,.1);border:1px solid rgba(91,157,255,.22);color:var(--ac2);margin-bottom:14px}
+.card h3{margin:0 0 7px;font-size:17px;letter-spacing:-.2px}
+.card p{margin:0;color:var(--tx2);font-size:15px}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-bottom:40px}
+ul.ticks{list-style:none;padding:0;margin:0}
+ul.ticks li{padding:7px 0 7px 30px;position:relative;color:var(--tx2);font-size:15.5px}
+ul.ticks li::before{content:"";position:absolute;left:4px;top:15px;width:12px;height:7px;border-left:2px solid var(--gr);border-bottom:2px solid var(--gr);transform:rotate(-45deg)}
+ul.ticks li b{color:var(--tx)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
+.step{position:relative;padding:28px 24px 24px;border:1px solid var(--bd);border-radius:var(--r);background:var(--bg3)}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:-15px;left:22px;width:30px;height:30px;border-radius:50%;background:var(--ac);color:#fff;font-weight:700;font-size:14px;display:grid;place-items:center}
+.step h3{margin:4px 0 8px;font-size:17px}
+.step p{margin:0;color:var(--tx2);font-size:15px}
+.who{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px}
+.who .card h3{display:flex;align-items:center;gap:10px}
+.who .card h3 .ic{color:var(--ac2)}
+.cta-band{text-align:center;padding:84px 0;background:radial-gradient(800px 340px at 50% 120%,rgba(91,157,255,.18),transparent 70%)}
+.cta-band p{color:var(--tx2);font-size:18px;max-width:640px;margin:0 auto 30px}
+footer{border-top:1px solid var(--bd);padding:40px 0;color:var(--tx3);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+footer a{color:var(--tx2)}
+.fine{font-size:13px;color:var(--tx3);margin-top:14px}
+@media (max-width:1040px){
+  nav.links{display:none}
+  .top .actions{margin-left:auto}
+}
+@media (max-width:900px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .grid3,.who,.steps,.intro{grid-template-columns:1fr}
+  .intro{gap:20px}
+  section{padding:64px 0}
+  .hero{padding-top:60px}
+  .frame .bar{height:26px}
+}
+@media (max-width:600px){
+  .top .actions .gh{display:none}
+}
+</style>
+
+<style>
+.notice{max-width:1160px;margin:28px auto 0;padding:14px 18px;border:1px solid rgba(91,157,255,.35);background:rgba(91,157,255,.08);border-radius:12px;color:var(--tx2);font-size:14.5px;text-align:left}
+.notice b{color:var(--tx)}
+.case{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start;padding:56px 0;border-bottom:1px solid var(--bd)}
+.case:last-of-type{border-bottom:0}
+.case .tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--ac);margin-bottom:10px}
+.case h2{margin:0 0 12px;font-size:clamp(24px,2.8vw,32px)}
+.case h3{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--tx3);margin:22px 0 8px}
+.case p,.case li{color:var(--tx2);font-size:15.5px}
+.case ul{padding-left:20px;margin:0}
+.case li{margin:5px 0}
+.case li b,.case p b{color:var(--tx)}
+.panel{background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r);padding:22px;position:sticky;top:84px}
+.panel h4{margin:0 0 14px;font-size:12.5px;letter-spacing:1.2px;text-transform:uppercase;color:var(--tx3)}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.kpi{background:var(--bg3);border:1px solid var(--bd);border-radius:10px;padding:14px}
+.kpi b{display:block;font-size:24px;letter-spacing:-.5px;color:var(--ac2)}
+.kpi span{font-size:13px;color:var(--tx2)}
+.kpi.g b{color:var(--gr)}
+.kpi.w b{color:#f0b04a}
+.feat{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
+.feat span{font-size:12.5px;padding:5px 10px;border-radius:999px;border:1px solid var(--bd2);color:var(--tx2)}
+.toc{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:36px;text-align:left}
+.toc a{display:block;padding:14px;border:1px solid var(--bd);border-radius:12px;background:var(--bg2);color:var(--tx);font-size:14px;font-weight:600}
+.toc a small{display:block;font-weight:400;color:var(--tx3);font-size:12.5px;margin-top:4px}
+.toc a:hover{border-color:var(--ac);text-decoration:none}
+@media (max-width:900px){.case{grid-template-columns:1fr;gap:24px;padding:44px 0}.toc{grid-template-columns:1fr 1fr}.panel{position:static}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4.2 18.5a9 9 0 1 1 15.6 0"/><path d="M12 14l4.5-4.5"/><circle cx="12" cy="14" r="1.2"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h8l-1 8 9-12h-8z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M9 11l3 3 9-10"/><path d="M20 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h11"/></symbol>
+  <symbol id="i-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 2.6-6.4L3 8"/><path d="M3 3v5h5M12 7v5l3.5 2"/></symbol>
+  <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 2v5M15 2v5M6 7h12v4a6 6 0 0 1-12 0zM12 17v5"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3 2 8l10 5 10-5z"/><path d="M2 13l10 5 10-5"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M15.8 8.2l-2 5.6-5.6 2 2-5.6z"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5v13c0 1.7 3.6 3 8 3s8-1.3 8-3v-13"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18.5 14.2A6.5 6.5 0 0 1 21.5 20"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-3-3 6.4-6.4a4 4 0 0 1-1.7-5.3z"/><path d="M3 21l6-6"/></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+  <symbol id="i-tick" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="AnaDocs AI home"><span class="logo">A</span><span>AnaDocs <span class="ai">AI</span><small>by Accodian</small></span></a>
+    <nav class="links" aria-label="Sections">
+      <a href="/#features">Features</a>
+      <a href="/#polaris">Polaris migration</a>
+      <a href="/#ai">AI assistant</a>
+      <a href="/#security">Security</a>
+      <a href="/#how">How it works</a>
+      <a href="/case-studies.html" style="color:var(--tx)">Examples</a>
+      <a href="https://app.anadocsai.com/" rel="noopener">Sign in</a>
+    </nav>
+    <div class="actions">
+      <a class="btn gh sm" href="https://accodian.com/contact" rel="noopener">Request a demo</a>
+      <a class="btn pri sm" href="https://app.anadocsai.com/signup" rel="noopener">Sign up free</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding-bottom:40px">
+    <div class="wrap">
+      <div class="eyebrow">Worked examples</div>
+      <h1>Five Anaplan problems, <span class="em">solved from the exports</span></h1>
+      <p class="lead">Each scenario walks through a kind of situation we meet in Anaplan estates and shows exactly what AnaDocs AI produces for it: the pages, the numbers and the decisions they support.</p>
+      <div class="notice"><b>How to read these.</b> These are illustrative scenarios on anonymised model profiles, not customer testimonials. The model sizes and counts are typical of what we see; every figure is the kind AnaDocs computes from a model’s structure, and the features named are live in the product today. On your own model you will get your numbers, not these.</div>
+      <div class="toc"><a href="#polaris-decision">Polaris decision<small>Budget from real blockers</small></a><a href="#handover">Builder has left<small>Document the unexplainable</small></a><a href="#slow-model">Slow model<small>Recover 31% of memory</small></a><a href="#polaris-tuning">Already on Polaris<small>Tune, do not migrate</small></a><a href="#estate">Centre of Excellence<small>Eight models, one map</small></a></div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      
+  <article class="case" id="polaris-decision">
+    <div>
+      <span class="tag">Scenario 1 · Polaris migration decision</span>
+      <h2>Should this FP&amp;A model move to Polaris, and what would it cost?</h2>
+      <h3>The situation</h3>
+      <p>A Classic planning model of 52 modules and about 700 line items had hit its workspace limit twice in a year. Polaris was on the roadmap, but every estimate of the migration effort was a guess, and the team feared the formulas that would stop working.</p>
+      <h3>What AnaDocs showed</h3>
+      <ul><li>Engine detection confirmed <b>Classic</b> from the exports and sized the model against Anaplan’s published cell costs.</li><li><b>12 line items will not work</b> as exported (LOOKUPs on a coarser time scale and mapping dimensions Polaris rejects), <b>57 will calculate differently</b> and need reconciling, and <b>184 patterns</b> work but would hurt performance in Polaris.</li><li>A phased plan: <b>48 delivery days</b> plus 14 client-side days, <b>11 weeks to cutover</b> including a parallel run, priced at the team’s own day rate, with the assumptions editable on the page.</li><li>Fix Studio produced paste-ready rewrites for the blockers, and the remediation workbook listed every finding by module.</li></ul>
+      <h3>What changed</h3>
+      <ul><li>The migration was approved with a budget grounded in a count of real problems, not cell counts.</li><li>The 12 blockers were fixed in the Classic model first, so the move itself carried no surprises.</li><li>The plan and the workbook became the project charter.</li></ul>
+    </div>
+    <aside class="panel">
+      <h4>Headline numbers in this scenario</h4>
+      <div class="kpis"><div class="kpi w"><b>12</b><span>line items that will not work in Polaris</span></div><div class="kpi w"><b>57</b><span>formulas to reconcile</span></div><div class="kpi "><b>48 d</b><span>delivery effort at the team’s day rate</span></div><div class="kpi "><b>11 wk</b><span>to cutover, including a parallel run</span></div></div>
+      <div class="feat"><span>Polaris migration</span><span>Engine detection</span><span>Fix Studio</span><span>Remediation workbook</span></div>
+    </aside>
+  </article>
+  <article class="case" id="handover">
+    <div>
+      <span class="tag">Scenario 2 · The builder has left</span>
+      <h2>A 234-module model nobody could explain any more</h2>
+      <h3>The situation</h3>
+      <p>The architect who built a 234-module, 2,000-line-item commercial planning model over four years left the company. Three weeks later a quarter-end change was needed in a module whose formulas ran to 400 characters, and nobody dared touch it.</p>
+      <h3>What AnaDocs showed</h3>
+      <ul><li>Every formula in plain English with its references, and a <b>lineage view</b> showing what feeds each line item and what depends on it, across modules.</li><li>Module purposes and a business glossary generated from the structure, so the new builder could read the model like a document.</li><li>The <b>Copilot</b> answered questions such as “which modules feed the margin reporting?” and cited the exact module and line item for every claim.</li><li>A <b>handover pack</b> and the full documentation site, exported for the team.</li></ul>
+      <h3>What changed</h3>
+      <ul><li>The new builder made the quarter-end change in two days instead of the fortnight the team had planned for.</li><li>The documentation is regenerated after every release, so the knowledge no longer lives in one head.</li><li>Onboarding for the next hire started from the handover pack rather than from screen-shares.</li></ul>
+    </div>
+    <aside class="panel">
+      <h4>Headline numbers in this scenario</h4>
+      <div class="kpis"><div class="kpi "><b>234</b><span>modules documented in one run</span></div><div class="kpi "><b>2,000+</b><span>line items with plain-English formulas</span></div><div class="kpi g"><b>2 days</b><span>instead of two weeks for the change</span></div><div class="kpi g"><b>100%</b><span>of Copilot claims cited to the model</span></div></div>
+      <div class="feat"><span>Plain-English formulas</span><span>Lineage</span><span>Copilot with citations</span><span>Handover pack</span></div>
+    </aside>
+  </article>
+  <article class="case" id="slow-model">
+    <div>
+      <span class="tag">Scenario 3 · The model that got slow</span>
+      <h2>Finding the 31% of memory nobody was using</h2>
+      <h3>The situation</h3>
+      <p>A supply-planning model had grown to 110 GB. Saves took minutes, the nightly process overran, and the team was about to request a bigger workspace at a five-figure cost.</p>
+      <h3>What AnaDocs showed</h3>
+      <ul><li>The <b>Optimisation report</b> for Classic listed where memory and calculation time went, ranked by impact, each rule traced to Anaplan’s own guidance and the Planual.</li><li>Summary methods left on by default on large line items, text line items dimensioned by day, and two staging modules nobody read any more accounted for <b>31% of the model</b>.</li><li>The <b>health score</b> rose from 58 to 82 as the quick wins were applied; every change came with a paste-ready fix and a “how to verify” step.</li><li>The Model diff confirmed that no formula logic had changed, only size.</li></ul>
+      <h3>What changed</h3>
+      <ul><li>The workspace upgrade was cancelled; the model fell to 76 GB.</li><li>The nightly process finished inside its window again.</li><li>The report is re-run before each release to stop the creep returning.</li></ul>
+    </div>
+    <aside class="panel">
+      <h4>Headline numbers in this scenario</h4>
+      <div class="kpis"><div class="kpi g"><b>31%</b><span>of memory recoverable, by rule</span></div><div class="kpi g"><b>110 → 76 GB</b><span>model size before and after</span></div><div class="kpi g"><b>58 → 82</b><span>health score</span></div><div class="kpi "><b>0</b><span>formula logic changes needed</span></div></div>
+      <div class="feat"><span>Optimisation report (Classic)</span><span>Health score</span><span>Fix Studio</span><span>Model diff</span></div>
+    </aside>
+  </article>
+  <article class="case" id="polaris-tuning">
+    <div>
+      <span class="tag">Scenario 4 · Already on Polaris</span>
+      <h2>Tuning a Polaris model when the grid says 361,000 TiB</h2>
+      <h3>The situation</h3>
+      <p>An insurance model had been built on Polaris from day one. Classic-era tooling priced it as a dense grid of 73 quadrillion cells and recommended a migration it had already made. The real size was 17 GB, and nobody knew where it went.</p>
+      <h3>What AnaDocs showed</h3>
+      <ul><li>AnaDocs read the reported size and the populated cell counts, detected <b>Polaris</b>, and showed the <b>real 17 GB</b> with the per-module split instead of an impossible dense figure.</li><li>The Polaris track of the Optimisation report ranked the tuning backlog in the order Anaplan’s own Polaris guidance recommends: <b>“All cells” formulas</b> first, then one-to-many LOOKUP chains, then summary methods on large line items.</li><li>No migration plan, cutover or effort estimate was shown, because the model already runs on Polaris; the page says so and points to the tuning list.</li></ul>
+      <h3>What changed</h3>
+      <ul><li>The team rewrote the eleven “All cells” formulas that drove most of the populated-cell growth.</li><li>Calculation effort on the heaviest module fell by half, measured in Anaplan after the change.</li><li>The tuning backlog became a standing item in the release checklist.</li></ul>
+    </div>
+    <aside class="panel">
+      <h4>Headline numbers in this scenario</h4>
+      <div class="kpis"><div class="kpi g"><b>17 GB</b><span>real size, from Anaplan, not an estimate</span></div><div class="kpi "><b>Polaris</b><span>engine detected from the export</span></div><div class="kpi w"><b>11</b><span>“All cells” formulas to rewrite first</span></div><div class="kpi g"><b>½</b><span>calculation effort on the heaviest module</span></div></div>
+      <div class="feat"><span>Optimisation report (Polaris)</span><span>Engine detection</span><span>Populated cells</span><span>Calculation complexity</span></div>
+    </aside>
+  </article>
+  <article class="case" id="estate">
+    <div>
+      <span class="tag">Scenario 5 · The Centre of Excellence</span>
+      <h2>Eight models, one data hub, and three risks nobody had written down</h2>
+      <h3>The situation</h3>
+      <p>A CoE ran eight models across three workspaces, fed by a data hub. Each model had an owner; nobody owned the connections between them. A list changed in one model broke a report in another every few months.</p>
+      <h3>What AnaDocs showed</h3>
+      <ul><li><b>Build my estate</b> pulled all eight models in one background job, and the <b>estate map</b> drew the real feeds from Anaplan’s import definitions: six confirmed imports, four file hand-offs and one CloudWorks flow.</li><li>The data hub was flagged as a <b>hub and single point of failure</b> for the UAT model.</li><li>Risks with evidence: the <b>SKU list differed across four models</b>, the test model was <b>one revision behind development</b>, two feeds had <b>failed on their last run</b>, and one import pointed at a model the login could no longer see.</li><li>The <b>Consolidation</b> tab found the same cost-allocation module rebuilt in three models.</li></ul>
+      <h3>What changed</h3>
+      <ul><li>List ownership moved to the hub, with drift now caught by the estate instead of by a broken report.</li><li>The two failed feeds were repaired the same day; the stale UAT copy was synced.</li><li>The quarterly CoE review now opens with the estate map and the risk list.</li></ul>
+    </div>
+    <aside class="panel">
+      <h4>Headline numbers in this scenario</h4>
+      <div class="kpis"><div class="kpi "><b>8</b><span>models in one background build</span></div><div class="kpi "><b>6 + 4 + 1</b><span>confirmed imports, file hand-offs, CloudWorks flows</span></div><div class="kpi w"><b>13</b><span>risks, each with evidence</span></div><div class="kpi w"><b>3</b><span>copies of one module to consolidate</span></div></div>
+      <div class="feat"><span>Estate map</span><span>Risks with evidence</span><span>Families and hubs</span><span>Consolidation</span><span>Copilot estate questions</span></div>
+    </aside>
+  </article>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>Which scenario is yours?</h2>
+      <p>Bring one model. We will run AnaDocs AI on it live, and you keep the documentation, the health score and the Polaris report whether or not we speak again.</p>
+      <div class="ctas">
+        <a class="btn pri" href="https://accodian.com/contact" rel="noopener">Request a demo →</a>
+        <a class="btn gh" href="https://app.anadocsai.com/signup" rel="noopener">Sign up free</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="brand" href="/"><span class="logo">A</span><span>AnaDocs <span class="ai">AI</span><small>by Accodian</small></span></a>
+      <p class="fine">© 2026 Accodian LLC. All rights reserved.<br>Anaplan is a trademark of Anaplan, Inc. AnaDocs AI is an independent product and is not affiliated with or endorsed by Anaplan.</p>
+    </div>
+    <div>
+      <b style="color:var(--tx)">Accodian LLC</b><br>
+      390 Amwell Road, Hillsborough NJ 08844, USA<br>
+      Kochi Infopark · Bangalore Electronic City, India<br>
+      <a href="https://accodian.com/" rel="noopener">accodian.com</a> · <a href="https://accodian.com/contact" rel="noopener">Contact</a> · <a href="https://app.anadocsai.com/" rel="noopener">Sign in</a> · <a href="https://app.anadocsai.com/terms" rel="noopener">Terms</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
